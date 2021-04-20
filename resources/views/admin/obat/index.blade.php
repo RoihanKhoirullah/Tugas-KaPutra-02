@@ -33,7 +33,7 @@
 
                             <div class="form-group">
                                     <label for="nama_obat">Nama Obat</label>
-                                    <input type="text" name="nama_obat" class="form-control" id="nama_obat" required>
+                                    <input type="text" name="nama_obat" class="form-control" id="nama_obat" onkeypress="return event.charCode <48 || event.charCode >57" required>
                             </div>
 
                             <br>
@@ -41,7 +41,7 @@
 
                             <div class="form-group">
                             <label for="keluhan">Jenis Obat</label>
-                                  <select name="jenis_obat" id="jenis_obat" class="form-control">
+                                  <select name="jenis_obat" id="jenis_obat" class="form-control" required>
                                           <option></option>
                                           <option value="kapsul">Kapsul</option>
                                           <option value="cair">Cair</option>

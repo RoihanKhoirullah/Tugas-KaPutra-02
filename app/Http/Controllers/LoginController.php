@@ -20,4 +20,25 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function registrasi(){
+        return view('pengguna.registrasi');
+        
+    }
+
+    public function simpanregistrasi(Request $request){
+        // dd($request->all());
+        User::create([
+            'nik' => $request->nik,
+            'name' => $request->name,
+            'alamat' => $request->alamat,
+            'level' => $request->level,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'remember_token' => Str::random(60)
+
+        ]);  
+        
+        return redirect('login');
+    }
 }

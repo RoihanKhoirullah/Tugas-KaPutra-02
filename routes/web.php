@@ -24,6 +24,10 @@ Route::get('/login', function () {
 Route::post('/postlogin' , 'LoginController@postlogin')->name('postlogin');
 Route::get('/logout' , 'LoginController@logout')->name('logout');
 
+// Registrasi
+Route::get('/registrasi' , 'LoginController@registrasi')->name('registrasi');
+Route::post('/simpanregistrasi' , 'LoginController@simpanregistrasi')->name('simpanregistrasi');
+
 // Admin
 Route::get('/admin', function () {
     return view('admin.index');
